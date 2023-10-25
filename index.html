@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Your existing meta tags and stylesheet link -->
+  <!-- ... -->
+
+  <title>Item Lister</title>
+</head>
+<body>
+  <header id="main-header" class="bg-success text-white p-4 mb-3">
+    <div class="container">
+      <h1 id="header-title">Item Lister <span style="display:none">123</span></h1>
+    </div>
+  </header>
+  <div class="container">
+    <div id="main" class="card card-body">
+      <h2 class="title">Add Items</h2>
+      <form class="form-inline mb-3">
+        <input type="text" class="form-control mr-2">
+        <input type="submit" class="btn btn-dark" value="Submit">
+      </form>
+      <h2 class="title">Items</h2>
+      <ul id="items" class="list-group">
+        <li class="list-group-item">Item 1</li>
+        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item">Item 3</li>
+        <li class="list-group-item">Item 4</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Get the title element
+    var titleElement = document.querySelector("title");
+
+    // Manipulate the title and add a black border
+    titleElement.innerHTML = '<span style="border: 1px solid black;">Item Lister</span>';
+
+    // Get the "Add Items" heading element
+    var addItemsHeading = document.querySelector("h2.title");
+
+    // Make "ADD ITEM" bold and change its font color to green
+    addItemsHeading.style.fontWeight = "bold";
+    addItemsHeading.style.color = "green";
+  </script>
+</body>
+</html>
