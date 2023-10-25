@@ -29,5 +29,39 @@
           <input type="submit" value="Get a Call">
         </form>
       </div>
+      <script>
+
+  // Add an event listener to the form
+  document.getElementById("registration-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    // Retrieve existing user details from local storage (if any)
+    var existingUserDetails = JSON.parse(localStorage.getItem("userDetails")) || [];
+
+    // Get user input values
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var timeForCall = document.getElementById("timeForCall").value;
+
+    // Create an object to store the current user's details
+    var userDetails = {
+      username: username,
+      email: email,
+      phone: phone,
+      timeForCall: timeForCall
+    };
+
+    // Append the new user's details to the existing data
+    existingUserDetails.push(userDetails);
+
+    // Store the updated data back in local storage
+    localStorage.setItem("userDetails", JSON.stringify(existingUserDetails));
+
+    // You can add any further actions or notifications here
+  });
+
+
+      </script>
 </body>
 </html>
