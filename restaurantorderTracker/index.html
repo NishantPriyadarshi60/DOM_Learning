@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order Details</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container" id="Order-list">
+        <form  id="add-product">
+            <div id="price">
+                <label for="price">Choose Price :</label>
+                <input type="number" id="price-input">
+            </div>
+            <div id="dish">
+                <label>Choose dish :</label>
+                <input type="text" id="dish-name">
+            </div>
+            <div id="table">
+                <label for="choosetable">Select Table</label>
+                <select id="chooseCategory">
+                    <option selected value="">Select table</option>
+                    <option value="Table1">Table1</option>
+                    <option value="Table2">Table2</option>
+                    <option value="Table3">Table3</option>
+                </select>
+            </div>
+
+            <input type="submit" value="submit">
+        </form>
+        <div id="table-list">
+            <h1>Orders</h1>
+
+            <h2>Table1</h2>
+            <div id="table1">
+
+            </div>
+
+            <h2>Table2</h2>
+            <div id="table2">
+
+            </div>
+
+            <h2>Table 3</h2>
+            <div id="table3">
+
+            </div>
+        </div>
+    </div>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
